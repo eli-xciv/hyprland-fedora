@@ -1,6 +1,11 @@
-# 🐉 hyprland-fedora
+<p align="center">
+  <img src="https://raw.githubusercontent.com/hyprwm/Hyprland/main/assets/header.svg" alt="Hyprland" width="600" />
+</p>
 
-> RPM packages for [Hyprland](https://hyprland.org/) and the Hypr ecosystem — **Fedora 44+** focused fork of [solopasha/hyprlandRPM](https://github.com/solopasha/hyprlandRPM).
+<p align="center">
+  RPM packages for <a href="https://hyprland.org/">Hyprland</a> and the Hypr ecosystem — <strong>Fedora 44+</strong> support.<br>
+  Fork of <a href="https://github.com/solopasha/hyprlandRPM">solopasha/hyprlandRPM</a>.
+</p>
 
 [![COPR](https://img.shields.io/badge/COPR-eli--xciv%2Fhyprland-blue?logo=fedora)](https://copr.fedorainfracloud.org/coprs/eli-xciv/hyprland/)
 [![Fedora](https://img.shields.io/badge/Fedora-42%20%7C%2043%20%7C%2044-294172?logo=fedora)](https://fedoraproject.org/)
@@ -92,7 +97,6 @@ This fork applies patches to build cleanly against **GCC 16** and updated librar
 - **hyprgraphics** — bumped to 0.5.1 (soname 1→4); adds `mesa-libGLES-devel` + `libdrm` build deps
 - **hyprtoolkit** — bumped to 0.5.3 (soname 2→5)
 - **COPR build method** — `source_build_method: make_srpm` with explicit `--spec` (required for Go/Rust vendor bundles)
-- **Network builds enabled** — required for Rust (`cargo vendor`) and npm packages
 
 ---
 
