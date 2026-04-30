@@ -1,6 +1,6 @@
 Name:           hyprgraphics
-Version:        0.2.0
-Release:        %autorelease -b11
+Version:        0.5.1
+Release:        %autorelease
 Summary:        Hyprland graphics / resource utilities
 
 License:        BSD-3-Clause
@@ -12,6 +12,8 @@ ExcludeArch:    %{ix86}
 
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
+BuildRequires:  mesa-libGLES-devel
+BuildRequires:  pkgconfig(libdrm)
 
 BuildRequires:  pkgconfig(cairo)
 BuildRequires:  pkgconfig(hyprutils)
@@ -56,7 +58,7 @@ Development files for %{name}.
 %files
 %license LICENSE
 %doc README.md
-%{_libdir}/lib%{name}.so.1
+%{_libdir}/lib%{name}.so.4
 %{_libdir}/lib%{name}.so.%{version}
 
 %files devel

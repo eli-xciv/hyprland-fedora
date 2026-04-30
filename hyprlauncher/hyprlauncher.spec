@@ -30,6 +30,9 @@ Requires:       wl-clipboard
 
 %prep
 %autosetup -p1
+# GCC 16: NAME_MAX requires <climits>, read() requires <unistd.h>
+sed -i '1s|^|#include <climits>\n#include <unistd.h>\n|' src/config/ConfigManager.cpp
+sed -i '1s|^|#include <unistd.h>\n|' src/finders/desktop/DesktopFinder.cpp
 
 %build
 %cmake \

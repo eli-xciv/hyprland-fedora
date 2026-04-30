@@ -29,6 +29,8 @@ Recommends:     wl-clipboard
 
 %prep
 %autosetup -p1
+# GCC 16 removed implicit <mutex>; std::mutex in hyprpicker.hpp requires it
+sed -i '1s|^|#include <mutex>\n|' src/hyprpicker.hpp
 
 
 %build

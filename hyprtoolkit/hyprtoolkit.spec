@@ -1,5 +1,5 @@
 Name:           hyprtoolkit
-Version:        0.2.0
+Version:        0.5.3
 Release:        %autorelease
 Summary:        A modern C++ Wayland-native GUI toolkit
 
@@ -44,6 +44,8 @@ Development files for %{name}.
 
 %prep
 %autosetup -p1
+# GCC 16 removed implicit <climits>; NAME_MAX requires it explicitly
+sed -i 's|#include <unistd.h>|#include <climits>\n#include <unistd.h>|' src/palette/ConfigManager.cpp
 
 %build
 %cmake -GNinja \
@@ -58,7 +60,7 @@ Development files for %{name}.
 %license LICENSE
 %doc README.md
 %{_libdir}/lib%{name}.so.%{version}
-%{_libdir}/lib%{name}.so.2
+%{_libdir}/lib%{name}.so.5
 
 %files devel
 %{_includedir}/%{name}/
