@@ -1,50 +1,102 @@
-This is a fork of solopasha/hyprlandRPM specifically targetted for Fedora 44. 
+# 🐉 hyprland-fedora
 
+> RPM packages for [Hyprland](https://hyprland.org/) and the Hypr ecosystem — **Fedora 44+** focused fork of [solopasha/hyprlandRPM](https://github.com/solopasha/hyprlandRPM).
 
-A collection of Hyprland and related packages:
+[![COPR](https://img.shields.io/badge/COPR-eli--xciv%2Fhyprland-blue?logo=fedora)](https://copr.fedorainfracloud.org/coprs/eli-xciv/hyprland/)
+[![Fedora](https://img.shields.io/badge/Fedora-42%20%7C%2043%20%7C%2044-294172?logo=fedora)](https://fedoraproject.org/)
+[![License](https://img.shields.io/badge/license-GPL--2.0-green)](LICENSE)
 
-* **[hyprland](https://wiki.hyprland.org/)** – A highly customizable dynamic tiling Wayland compositor that doesn't sacrifice on its looks.
-* **[xdg-desktop-portal-hyprland](https://wiki.hyprland.org/Useful-Utilities/Hyprland-desktop-portal/)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/xdg-desktop-portal-hyprland/xdg-desktop-portal-hyprland.spec) – xdg-desktop-portal backend for hyprland.
-* **hyprland-git** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/hyprland-git/hyprland-git.spec) – Hyprland git snapshots.
-* **[hyprland-contrib](https://github.com/hyprwm/contrib)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/hyprland-contrib/hyprland-contrib.spec) – Community scripts and utilities for Hypr projects.
-* **[hyprland-plugins](https://github.com/hyprwm/hyprland-plugins)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/hyprland-plugins/hyprland-plugins.spec) – Official [plugins](https://wiki.hyprland.org/Plugins/Using-Plugins/) for the hyprland package. (Installed in /usr/lib64/hyprland)
-* **hyprland-plugins-git** – Official [plugins](https://wiki.hyprland.org/Plugins/Using-Plugins/) for the hyprland-git package. (Installed in /usr/lib64/hyprland)
-* **[hyprpaper](https://github.com/hyprwm/hyprpaper)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/hyprpaper/hyprpaper.spec) – A blazing fast wayland [wallpaper](https://wiki.hyprland.org/hyprland-wiki/pages/Useful-Utilities/Wallpapers/) utility with IPC controls.
-* **[hyprpicker](https://github.com/hyprwm/hyprpicker)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/hyprpicker/hyprpaper.spec) – A wlroots-compatible Wayland color picker.
-* **[hypridle](https://github.com/hyprwm/hypridle)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/hypridle/hypridle.spec) - Hyprland's idle daemon.
-* **[hyprlock](https://github.com/hyprwm/hyprlock)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/hyprlock/hyprlock.spec) - Hyprland's GPU-accelerated screen locking utility.
-* **[hyprsunset](https://github.com/hyprwm/hyprsunset)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/hyprsunset/hyprsunset.spec) - An application to enable a blue-light filter on Hyprland.
-* **[hyprpolkitagent](https://github.com/hyprwm/hyprpolkitagent)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/hyprpolkitagent/hyprpolkitagent.spec) - A simple polkit authentication agent for Hyprland.
-* **[hyprsysteminfo](https://github.com/hyprwm/hyprsysteminfo)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/hyprsysteminfo/hyprsysteminfo.spec) - An application to display information about the running system.
-* **[hyprland-autoname-workspaces](https://github.com/hyprland-community/hyprland-autoname-workspaces)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/hyprland-autoname-workspaces/hyprland-autoname-workspaces.spec) – Automatically rename workspaces with icons of started applications.
-* **[hyprshot](https://github.com/Gustash/Hyprshot)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/hyprshot/hyprshot.spec) – A utility to easily take screenshots in Hyprland using your mouse.
-* **[satty](https://github.com/gabm/Satty)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/satty/satty.spec) – A screenshot annotation tool inspired by Swappy and Flameshot.
-* **[aylurs-gtk-shell](https://github.com/Aylur/ags)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/aylurs-gtk-shell/aylurs-gtk-shell.spec) - Aylurs's Gtk Shell (AGS), An eww inspired gtk widget system (legacy version).
-* **[aylurs-gtk-shell2](https://github.com/Aylur/ags)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/astal/aylurs-gtk-shell2/aylurs-gtk-shell2.spec) - CLI around [Astal](https://github.com/aylur/astal) to scaffold and run projects.
-* **[hyprpanel](https://hyprpanel.com/)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/astal/hyprpanel/hyprpanel.spec) - A Bar/Panel for Hyprland with extensive customizability.
-* **[waybar-git](https://github.com/Alexays/Waybar)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/waybar-git/waybar-git.spec) – waybar git snapshots.
-* **[eww-git](https://elkowar.github.io/eww/eww.html)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/eww-git/eww-git.spec) – A widget system made in Rust (git snapshots).
-* **[cliphist](https://github.com/sentriz/cliphist)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/cliphist/cliphist.spec) – Wayland clipboard manager.
-* **[nwg-clipman](https://github.com/nwg-piotr/nwg-clipman)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/nwg-clipman/nwg-clipman.spec) - GTK3-based GUI for cliphist.
-* **[swww](https://github.com/Horus645/swww)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/swww/swww.spec) – Efficient animated wallpaper daemon for wayland, controlled at runtime.
-* **[waypaper](https://github.com/anufrievroman/waypaper)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/waypaper/waypaper.spec) - GUI wallpaper manager.
-* **[hyprnome](https://github.com/donovanglover/hyprnome)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/hyprnome/hyprnome.spec) – GNOME-like workspace switching in Hyprland.
-* **[hyprdim](https://github.com/donovanglover/hyprdim)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/hyprdim/hyprdim.spec) – Automatically dim windows in Hyprland when switching between them.
-* **[swaylock-effects](https://github.com/jirutka/swaylock-effects)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/swaylock-effects/swaylock-effects.spec) - Swaylock, with fancy effects.
-* **[pyprland](https://github.com/hyprland-community/pyprland)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/pyprland/pyprland.spec) - Hyprland extensions.
-* **[mpvpaper](https://github.com/GhostNaN/mpvpaper)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/mpvpaper/mpvpaper.spec) - A video wallpaper program for wlroots based wayland compositors.
-* **[uwsm](https://github.com/Vladimir-csp/uwsm)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/uwsm/uwsm.spec) - Universal Wayland Session Manager.
-* **[qt6ct-kde](https://github.com/ilya-fedin/qt6ct)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/qt6ct-kde/qt6ct.spec) - Qt6 Configuration Utility, patched for proper integration with KDE applications.
-* **[hyprqt6engine](https://github.com/hyprwm/hyprqt6engine)** [(spec)](https://github.com/solopasha/hyprlandRPM/blob/master/hyprqt6engine/hyprqt6engine.spec) - Qt6 Theme Provider for Hyprland.
+---
 
-## If you find this repository helpful, please consider supporting it with a donation
+## 📦 Installation
 
-TJWXhcsoGQbbJTe9uxHd5QjdDu9yU7b2S3 (USDT TRC20)
+```bash
+sudo dnf copr enable eli-xciv/hyprland
+sudo dnf install hyprland
+```
 
-TJWXhcsoGQbbJTe9uxHd5QjdDu9yU7b2S3 (Tron)
+> **Note:** `hyprland-git` tracks nightly snapshots and is recommended for the latest fixes.
 
-0x03b1C69d364119441c6a6B41Aeb4859E62dFc366 (USDT Ethereum)
+---
 
-bc1qna5rg328tdufshjhtjtkq69nraclqy4x77jr7w (BTC)
+## 🧩 Packages
 
-0x03b1C69d364119441c6a6B41Aeb4859E62dFc366 (ETH)
+### Core
+
+| Package | Description |
+|---|---|
+| [hyprland](https://wiki.hyprland.org/) | A highly customizable dynamic tiling Wayland compositor |
+| [hyprland-git](https://wiki.hyprland.org/) | Hyprland — nightly git snapshots |
+| [xdg-desktop-portal-hyprland](https://wiki.hyprland.org/Useful-Utilities/Hyprland-desktop-portal/) | XDG desktop portal backend for Hyprland |
+| [hyprland-plugins](https://github.com/hyprwm/hyprland-plugins) | Official plugins for `hyprland` |
+| [hyprland-plugins-git](https://github.com/hyprwm/hyprland-plugins) | Official plugins for `hyprland-git` |
+| [hyprland-contrib](https://github.com/hyprwm/contrib) | Community scripts and utilities for Hypr projects |
+
+### 🔒 Session & System
+
+| Package | Description |
+|---|---|
+| [hyprlock](https://github.com/hyprwm/hyprlock) | GPU-accelerated screen locking utility |
+| [hypridle](https://github.com/hyprwm/hypridle) | Idle daemon for Hyprland |
+| [hyprpolkitagent](https://github.com/hyprwm/hyprpolkitagent) | Polkit authentication agent |
+| [hyprsysteminfo](https://github.com/hyprwm/hyprsysteminfo) | System information display |
+| [uwsm](https://github.com/Vladimir-csp/uwsm) | Universal Wayland Session Manager |
+
+### 🖼️ Wallpaper & Display
+
+| Package | Description |
+|---|---|
+| [hyprpaper](https://github.com/hyprwm/hyprpaper) | Blazing fast Wayland wallpaper utility with IPC |
+| [swww](https://github.com/Horus645/swww) | Efficient animated wallpaper daemon |
+| [mpvpaper](https://github.com/GhostNaN/mpvpaper) | Video wallpaper for wlroots compositors |
+| [waypaper](https://github.com/anufrievroman/waypaper) | GUI wallpaper manager |
+| [hyprsunset](https://github.com/hyprwm/hyprsunset) | Blue-light filter for Hyprland |
+
+### 🛠️ Utilities
+
+| Package | Description |
+|---|---|
+| [hyprpicker](https://github.com/hyprwm/hyprpicker) | Wayland color picker |
+| [hyprshot](https://github.com/Gustash/Hyprshot) | Screenshot utility with mouse support |
+| [satty](https://github.com/gabm/Satty) | Screenshot annotation tool |
+| [hyprlauncher](https://github.com/hyprwm/hyprlauncher) | Multipurpose launcher / picker |
+| [cliphist](https://github.com/sentriz/cliphist) | Wayland clipboard manager |
+| [nwg-clipman](https://github.com/nwg-piotr/nwg-clipman) | GTK3 GUI frontend for cliphist |
+| [hyprnome](https://github.com/donovanglover/hyprnome) | GNOME-like workspace switching |
+| [hyprdim](https://github.com/donovanglover/hyprdim) | Auto-dim inactive windows |
+| [pyprland](https://github.com/hyprland-community/pyprland) | Hyprland extensions in Python |
+| [hyprland-autoname-workspaces](https://github.com/hyprland-community/hyprland-autoname-workspaces) | Auto-rename workspaces with app icons |
+
+### 🎨 Theming & Widgets
+
+| Package | Description |
+|---|---|
+| [aylurs-gtk-shell](https://github.com/Aylur/ags) | AGS — GTK widget system (legacy) |
+| [aylurs-gtk-shell2](https://github.com/Aylur/ags) | AGS v2 — CLI for Astal-based projects |
+| [hyprpanel](https://hyprpanel.com/) | Feature-rich bar/panel for Hyprland |
+| [eww-git](https://elkowar.github.io/eww/) | Rust-based widget system (nightly) |
+| [waybar-git](https://github.com/Alexays/Waybar) | Highly customizable Wayland bar (nightly) |
+| [swaylock-effects](https://github.com/jirutka/swaylock-effects) | Swaylock with visual effects |
+| [qt6ct-kde](https://github.com/ilya-fedin/qt6ct) | Qt6 configuration utility with KDE patches |
+| [hyprqt6engine](https://github.com/hyprwm/hyprqt6engine) | Qt6 theme provider for Hyprland |
+
+---
+
+## 🔧 Fedora 44 Compatibility
+
+This fork applies patches to build cleanly against **GCC 16** and updated library sonames on Fedora 44:
+
+- **GCC 16 implicit header removals** — `<mutex>`, `<climits>`, `<unistd.h>` added where needed
+- **aquamarine** — bumped to 0.11.0; strips `-Wpedantic` for GCC 16 zero-size array errors
+- **hyprutils** — bumped to 0.13.0 (soname 9→12)
+- **hyprgraphics** — bumped to 0.5.1 (soname 1→4); adds `mesa-libGLES-devel` + `libdrm` build deps
+- **hyprtoolkit** — bumped to 0.5.3 (soname 2→5)
+- **COPR build method** — `source_build_method: make_srpm` with explicit `--spec` (required for Go/Rust vendor bundles)
+- **Network builds enabled** — required for Rust (`cargo vendor`) and npm packages
+
+---
+
+## 🙏 Credits
+
+- Upstream: [solopasha/hyprlandRPM](https://github.com/solopasha/hyprlandRPM) — original RPM packaging
+- [Hyprland](https://hyprland.org/) and the [hyprwm](https://github.com/hyprwm) team for the ecosystem
