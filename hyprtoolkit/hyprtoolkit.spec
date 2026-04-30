@@ -44,6 +44,8 @@ Development files for %{name}.
 
 %prep
 %autosetup -p1
+# GCC 16 removed implicit <climits>; NAME_MAX requires it explicitly
+sed -i 's|#include <unistd.h>|#include <climits>\n#include <unistd.h>|' src/palette/ConfigManager.cpp
 
 %build
 %cmake -GNinja \
