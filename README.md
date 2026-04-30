@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/hyprwm/Hyprland/main/assets/header.svg" alt="Hyprland" width="600" />
+  <img src="https://raw.githubusercontent.com/hyprwm/Hyprland/main/assets/hyprland.png" alt="Hyprland" height="80" />
+  &nbsp;&nbsp;
+  <img src="https://avatars.githubusercontent.com/u/3316637" alt="Fedora" height="80" />
 </p>
 
 <p align="center">
