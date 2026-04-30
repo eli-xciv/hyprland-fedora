@@ -1,6 +1,6 @@
 Name:           aquamarine
-Version:        0.9.5
-Release:        %autorelease -b2
+Version:        0.11.0
+Release:        %autorelease
 Summary:        A very light linux rendering backend library
 License:        BSD-3-Clause
 URL:            https://github.com/hyprwm/aquamarine
@@ -15,7 +15,7 @@ BuildRequires:  mesa-libEGL-devel
 
 BuildRequires:  pkgconfig(gbm)
 BuildRequires:  pkgconfig(hwdata)
-BuildRequires:  pkgconfig(hyprutils)
+BuildRequires:  pkgconfig(hyprutils) >= 0.13.0
 BuildRequires:  pkgconfig(hyprwayland-scanner)
 BuildRequires:  pkgconfig(libdisplay-info)
 BuildRequires:  pkgconfig(libdrm)
@@ -37,6 +37,8 @@ Development files for %{name}.
 
 %prep
 %autosetup -p1
+# Remove -Wpedantic: GCC 16 treats zero-size arrays in generated protocol files as errors
+sed -i 's/-Wpedantic)/)/g' CMakeLists.txt
 
 %build
 %cmake -DCMAKE_BUILD_TYPE=Release
@@ -49,7 +51,7 @@ Development files for %{name}.
 %license LICENSE
 %doc README.md
 %{_libdir}/lib%{name}.so.%{version}
-%{_libdir}/lib%{name}.so.8
+%{_libdir}/lib%{name}.so.10
 
 %files devel
 %{_includedir}/%{name}/
