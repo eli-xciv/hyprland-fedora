@@ -12,6 +12,8 @@ ExcludeArch:    %{ix86}
 
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
+BuildRequires:  mesa-libGLES-devel
+BuildRequires:  pkgconfig(libdrm)
 
 BuildRequires:  pkgconfig(cairo)
 BuildRequires:  pkgconfig(hyprutils)
