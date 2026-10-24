@@ -1,8 +1,8 @@
-%global hyprland_commit 66ab80a6a98562fab4f56a378d3aa4671e3ceaa5
+%global hyprland_commit a1c2428f79b3b05c3fd36c27378e3538c8c6a014
 %global hyprland_shortcommit %(c=%{hyprland_commit}; echo ${c:0:7})
-%global bumpver 96
-%global commits_count 7956
-%global commit_date Fri Oct 23 02:45:12 2026
+%global bumpver 97
+%global commits_count 7957
+%global commit_date Fri Oct 23 11:31:33 2026
 
 %global protocols_commit null
 %global protocols_shortcommit %(c=%{protocols_commit}; echo ${c:0:7})
