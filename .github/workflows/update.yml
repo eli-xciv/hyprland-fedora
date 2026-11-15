@@ -28,4 +28,10 @@ jobs:
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          find -name "update.sh" -execdir {} \;
+          rc=0
+          for script in */update.sh; do
+            echo "::group::$script"
+            (cd "$(dirname "$script")" && ./update.sh) || { echo "::error::$script failed"; rc=1; }
+            echo "::endgroup::"
+          done
+          exit $rc
